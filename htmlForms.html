@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>Page Title</title>
+</head>
+<body>
+<form>
+First name:<br>
+<input type="text" name="firstname">
+<br>
+Last name:<br>
+<input type="text" name="lastname">
+</form>
+
+<!--Age-->
+<form>
+Age:<br/>
+<input type="number">
+</form>
+
+<form>
+Sex:<br>
+<input type="radio" name="sex" value="male" checked>Male
+<br>
+<input type="radio" name="sex" value="female">Female
+</form>
+
+<!--submit and textarea-->
+
+<form>
+Who do u look like more?:<br>
+<input type="radio" name="look" value="cat">Cat
+<br>
+<input type="radio" name="look" value="monkey" checked="checked">Monkey
+</form> 
+<br>
+<form action="action_page.php">
+Is it ur pet?:<br>
+<input type="text" name="firstname" value="Mickey">
+<br>
+<input type="submit" value="Submit">
+<br>
+What else can u say about it?
+<br>
+<textarea name="message" rows="10" cols="30">
+</textarea>
+</form>
+<br>
+
+<!--Fieldset(groups related elements in a form) & legend(defines a caption for a <fieldset> element-->
+<form action="action_page.php">
+<fieldset>
+<legend>Information about ur pet:</legend>
+First name:<br>
+<input type="text" name="firstname" value="Mickey">
+<br>
+Last name:<br>
+<input type="text" name="lastname" value="Mouse">
+<br><br>
+<input type="submit" value="Submit">
+</fieldset>
+</form>
+
+<!--Select (Defines a drop-down list)-->
+
+<form action="action_page.php">
+Select ur car:
+<select name="cars">
+<option value="volvo">Volvo</option>
+<option value="saab">Saab</option>
+<option value="fiat">Fiat</option>
+<option value="audi" selected>Audi</option>
+<option value="moskvich">Moskvich</option>
+</select>
+<br><br>
+<input type="submit">
+</form>
+
+<!--Button-->
+
+<button type="button" onclick="alert('&quot;  alert &quot; in html!')">Click Me!</button>
+<button type="button" onclick="alert('Hello World!')">Click Me!</button>
+<br>
+
+<h4>HTML5 Form elements: datalist,keygen,output<br>
+The &ltdatalist&gt element specifies a list of pre-defined options for an &ltinput&gt element.
+
+Users will see a drop-down list of pre-defined options as they input data.
+
+The list attribute of the &ltinput&gt element, must refer to the id attribute of the &ltdatalist&gt element.</h4>
+
+<form action="action_page.php">
+
+<input list="browsers" name="browser">
+<datalist id="browsers">
+  <option value="Internet Explorer">
+  <option value="Firefox">
+  <option value="Chrome">
+  <option value="Opera">
+  <option value="Safari">
+</datalist>
+<input type="submit">
+</form>
+<p><b>Note:</b> The datalist tag is not supported in Safari or IE9 (and earlier).</p>
+
+<br>
+<h4>The purpose of the &ltkeygen&gt element is to provide a secure way to authenticate users.
+
+The &ltkeygen&gt element specifies a key-pair generator field in a form.
+
+When the form is submitted, two keys are generated, one private and one public.
+
+The private key is stored locally, and the public key is sent to the server.
+
+The public key could be used to generate a client certificate to authenticate the user in the future</h4>
+
+<form action="action_page.php">
+Username:
+<br>
+<input type="text" name="user">
+<br><br>
+Encryption:
+<br>
+<keygen name="security">
+<br><br>
+<input type="submit">
+</form>
+<br>
+<p>The &ltoutput&gt element represents the result of a calculation (like one performed by a script).</p>
+<form action="action_page.asp"
+oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+0
+<input type="range"  id="a" name="a" value="50">
+100 +
+<input type="number" id="b" name="b" value="50">
+=
+<output name="x" for="a b"></output>
+<br><br>
+<input type="submit">
+</form>
+
+</body>
+</html>
